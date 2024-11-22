@@ -21,7 +21,7 @@ nginx -g "daemon off;" &
 
 # Start Prometheus Exporter in the background
 echo "Starting Nginx Prometheus Exporter..."
-/usr/local/bin/nginx-prometheus-exporter -nginx.scrape-uri=http://127.0.0.1:80/stub_status &
+/usr/local/bin/nginx-prometheus-exporter -nginx.scrape-uri=http://127.0.0.1:8080/stub_status &
 
 # Wait for all background processes to finish
 wait -n
